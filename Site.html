@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>D&I - Bookster's Shop</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header{
+    padding: 5px;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: left;
+}
+footer,textarea {
+    padding: 5px;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: left;
+}
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+
+article{
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+h1,#right_upper,#loginbutton,#campuri{
+
+    display: inline-block; 
+}
+.button {
+    background-color: grey;
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+table{
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+ 
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+* {
+    box-sizing: border-box;
+}
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 90%;
+    background: #f1f1f1;
+}
+
+form.example button {
+    float: left;
+    width: 10%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+form.example button:hover {
+    background: #0b7dda;
+}
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.btn{
+  font-family: "Sentinel A","Sentinel B",Georgia,serif; 
+  text-shadow: 0 1px 1px rgba(0,0,0,0.4);
+  background: #4383c5;
+  color: #FFF;
+  padding: 6px 20px 7px; 
+  font-size: 18px;
+  line-height: 23px;
+  min-width: 50px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle; 
+  border: 1px solid 4383c5;
+  cursor: pointer;
+  font-weight: 600px; 
+  transition: opacity 0.1s ease-out,background 0.1s ease-out;
+  -webkit-border-radius: 2px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.3),0 1px 3px rgba(0,0,0,0.4);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.3),0 1px 3px rgba(0,0,0,0.4);
+  -webkit-transition: opacity 0.1s ease-out,background 0.1s ease-out;
+}
+
+
+.btn:hover
+{
+  background-color: #356fac; 
+}
+
+div.Contact {
+    line-height: 10%;
+}
+
+p.Recommended{
+   font-family: Georgia,serif;
+   font-size:25px;
+   color: blue;
+}
+
+#Author,#Publisher,#Price{
+    display: inline-block; 
+    text-align: center;
+    line-height: 10%;
+}
+.left {
+    float: left;
+    width: 300px;
+    padding: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header>
+ 
+   <h1>D&I - Bookster's Shop</h1>
+   
+ <button style="font-size:24px"><i class="fa fa-shopping-cart"></i></button>
+   <form id="campuri">
+   User name:<br>
+   <input type="text" name="username" id="username"><br>
+   Password:<br>
+   <input type="password" name="psw" id="password">
+   </form> 
+
+   <form id="loginbutton">
+   <input type="button" class="button" value="Login"><br>
+   <a href="url">Forgot Password?</a>
+    </form>
+  
+
+   <form id="right_upper">
+    <p>No account?</p>
+   <input type="button" class="button" value="Sign Up">
+    </form>
+
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#">Fantasy</a></li>
+    <li><a href="#">History</a></li>
+    <li><a href="#">Police</a></li>
+  </ul>
+</nav>
+
+<article>
+
+<form class="example" action="/action_page.php">
+  <input type="text" placeholder="Search.." name="search">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+
+<div class="left">
+    <p>Use filters</p>
+    <form id="Author">
+    <select>
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="opel">Opel</option>
+      <option value="audi">Audi</option>
+    </select>
+    </form>
+    <form id="Publisher">
+    <select>
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="opel">Opel</option>
+      <option value="audi">Audi</option>
+    </select>
+    </form>
+    <form id="Price">
+    <select>
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="opel">Opel</option>
+      <option value="audi">Audi</option>
+    </select>
+    </form>
+</div><br>
+  <p class="Recommended">Recommended books</p>
+  <table>
+     
+  <tr>
+
+    <th>Book Name</th>
+    <th>Author</th>
+    <th>Publishing House</th>
+    <th>Price</th>
+  </tr>
+
+  <tr>
+ 
+        <td>
+            <button style="font-size:24px"><i class="fa fa-cart-plus"></i></button>
+            <button style="font-size:24px"> <i class="fa fa-star"></i></button>
+        Alfreds Futterkiste
+        </td>
+        <td>Maria Anders</td>
+        <td>Germany</td>
+        <td>25.00</td>
+      </tr>
+      <tr>
+        <td>           
+            <button style="font-size:24px"><i class="fa fa-cart-plus"></i></button>
+            <button style="font-size:24px"> <i class="fa fa-star"></i></button>
+        Centro comercial Moctezuma</td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+        <td>15.00</td>
+      </tr>
+      <tr>
+        <td>
+            <button style="font-size:24px"><i class="fa fa-cart-plus"></i></button>
+            <button style="font-size:24px"> <i class="fa fa-star"></i></button>
+        Ernst Handel</td>
+        <td>Roland Mendel</td>
+        <td>Austria</td>
+        <td>30.00</td>
+      </tr>
+      <tr>
+        <td>
+            <button style="font-size:24px"><i class="fa fa-cart-plus"></i></button>
+            <button style="font-size:24px"> <i class="fa fa-star"></i></button>
+        Island Trading</td>
+        <td>Helen Bennett</td>
+        <td>UK</td>
+        <td>35.00</td>
+      </tr>
+      <tr>
+        <td>
+            <button style="font-size:24px"><i class="fa fa-cart-plus"></i></button>
+            <button style="font-size:24px"> <i class="fa fa-star"></i></button>
+        Laughing Bacchus Winecellars</td>
+        <td>Yoshi Tannamuri</td>
+        <td>Canada</td>
+        <td>40.00</td>
+      </tr>
+      <tr>
+        <td>
+            <button style="font-size:24px"><i class="fa fa-cart-plus"></i></button>
+            <button style="font-size:24px"> <i class="fa fa-star"></i></button>
+        Magazzini Alimentari Riuniti</td>
+        <td>Giovanni Rovelli</td>
+        <td>Italy</td>
+        <td>5.00</td>
+      </tr>
+
+</table>
+</article>
+
+<footer>
+
+<div class="Contact">
+<p>Contact </p>
+<p>Phone : 0765334555</p>
+<p>Email : bookster@gmail.com</p>
+<p>Everyday between 10:00 - 22:00</p>
+</div>
+<p>
+<label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Subscribe to newsletter
+</label>
+</p>
+
+<p style="text-align:center" >&copy; 2018 Bookster's Shop. All Rights Reserved.<p>
+</div>
+</footer>
+
+
+
+
+
+</body>
+</html>
