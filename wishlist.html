@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>D&I - Bookster's Shop</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: left;
+}
+
+footer,textarea {
+    padding: 5px;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: left;
+}
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+
+article{
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+
+h1,button.ShoppingCart{
+
+    display: inline-block; 
+}
+
+table{
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+p.Wishlist{
+    font-family: Georgia,serif;
+    font-size:30px;
+    width: 60%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 170px;
+    margin-left: 600px;
+    color: blue;
+}
+
+button.ShoppingCart{
+    float: right;
+    font-size:24px;
+}
+
+#Author,#Publisher,#Price{
+    display: inline-block; 
+    text-align: center;
+    line-height: 10%;
+}
+
+.left {
+    float: left;
+    width: 300px;
+    padding: 10px;
+}
+
+.button {
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+</style>
+</head>
+
+<div class="container">
+
+<header>
+ 
+     <h1>D&I - Bookster's Shop</h1>
+     <button class="ShoppingCart"><i class="fa fa-shopping-cart"></i></button>
+
+ </header>
+
+ <p class="Wishlist">Wishlist</p>
+  <table>
+     
+  <tr>
+
+    <th style="text-align: center">Book Name</th>
+    <th style="text-align: center">Author</th>
+    <th style="text-align: center">Publishing House</th>
+    <th style="text-align: center">Price</th>
+
+  </tr>
+
+  <tr>
+
+     <td>
+
+            <button style="font-size:24px"><i class="fa fa-minus"></i></button>
+            <button style="font-size:24px"><i class="fa fa-cart-plus"></i></button>
+        Alfreds Futterkiste
+        </td>
+        <td>Maria Anders</td>
+        <td>Germany</td>
+        <td>25.00</td>
+      </tr>
+      <tr>
+        <td>           
+            <button style="font-size:24px"><i class="fa fa-minus"></i></button>
+            <button style="font-size:24px"><i class="fa fa-cart-plus"></i></button>
+        Centro comercial Moctezuma</td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+        <td>15.00</td>
+      </tr>
+      <tr>
+        <td>
+            <button style="font-size:24px"><i class="fa fa-minus"></i></button>
+            <button style="font-size:24px"><i class="fa fa-cart-plus"></i></button>
+        Ernst Handel</td>
+        <td>Roland Mendel</td>
+        <td>Austria</td>
+        <td>30.00</td>\
+      </tr>
+      <tr>
+        <td>
+            <button style="font-size:24px"><i class="fa fa-minus"></i></button>
+            <button style="font-size:24px"><i class="fa fa-cart-plus"></i></button>
+        Island Trading</td>
+        <td>Helen Bennett</td>
+        <td>UK</td>
+        <td>35.00</td>
+      </tr>
+      <tr>
+        <td>
+            <button style="font-size:24px"><i class="fa fa-minus"></i></button>
+            <button style="font-size:24px"><i class="fa fa-cart-plus"></i></button>
+        Laughing Bacchus Winecellars</td>
+        <td>Yoshi Tannamuri</td>
+        <td>Canada</td>
+        <td>40.00</td>
+      </tr>
+      <tr>
+        <td>
+            <button style="font-size:24px"><i class="fa fa-minus"></i></button>
+            <button style="font-size:24px"><i class="fa fa-cart-plus"></i></button>
+        Magazzini Alimentari Riuniti</td>
+        <td>Giovanni Rovelli</td>
+        <td>Italy</td>
+        <td>5.00</td>
+      </tr>
+
+</table>
+
