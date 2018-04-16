@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>D&I - Bookster's Shop</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header{
+    padding: 5px;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: left;
+}
+footer,textarea {
+    padding: 5px;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: left;
+}
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+
+article{
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+h1,#right_upper,#loginbutton,#campuri{
+
+    display: inline-block; 
+}
+.button {
+    background-color: grey;
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+table{
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+p.PlacedOrders{
+    font-family: Georgia,serif;
+    font-size:30px;
+    width: 60%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 170px;
+    margin-left: 600px;
+    color: blue;
+}
+
+button.PlacedOrders{
+    margin-left: 1635px;
+    font-size:24px;
+}
+
+.left {
+    float: left;
+    width: 300px;
+    padding: 10px;
+}
+
+.button {
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+</style>
+</head>
+
+<div class="container">
+
+<header>
+ 
+     <h1>D&I - Bookster's Shop</h1>
+     <button class="PlacedOrders"><i class="fa fa-shopping-cart"></i></button>
+
+ </header>
+
+ <p class="PlacedOrders">Placed Orders</p>
+  <table>
+     
+  <tr>
+
+    <th style="text-align: center">Order ID</th>
+    <th style="text-align: center">Client Name</th>
+    <th style="text-align: center">Date</th>
+    <th style="text-align: center">Total Sum</th>
+
+  </tr>
+
+     <tr>
+        <td>123456</td>
+        <td>Maria Anders</td>
+        <td>12.12.2017</td>
+        <td style="text-align: center">
+            25.00
+            <input type="button" class="button" value="Details">
+        </td>
+      </tr>
+
+      <tr>
+        <td>123457</td>
+        <td>Francisco Chang</td>
+        <td>12.12.2017</td>
+        <td style="text-align: center;">
+            15.00
+            <input type="button" class="button" value="Details">
+        </td>
+      </tr>
+
+      <tr>
+        <td>123451</td>
+        <td>Roland Mendel</td>
+        <td>12.12.2017</td>
+        <td style="text-align: center;">
+            30.00
+            <input type="button" class="button" value="Details">
+        </td>\
+      </tr>
+
+      <tr>
+        <td>123452</td>
+        <td>Helen Bennett</td>
+        <td>12.12.2017</td>
+        <td style="text-align: center;">        
+            35.00
+            <input type="button" class="button" value="Details">
+        </td>
+      </tr>
+
+      <tr>
+        <td>123453</td>
+        <td>Yoshi Tannamuri</td>
+        <td>12.12.2017</td>
+        <td style="text-align: center;">
+            40.00
+            <input type="button" class="button" value="Details">
+        </td>
+      </tr>
+
+      <tr>
+        <td>123454</td>
+        <td>Giovanni Rovelli</td>
+        <td>12.12.2017</td>
+        <td style="text-align: center;">
+            5.00
+            <input type="button" class="button" value="Details">
+        </td>
+      </tr>
+
+</table>
