@@ -124,7 +124,9 @@ button.OrderDetails{
     cursor: pointer;
     margin-bottom: 20px;
 }
-
+div.Contact,div.copyright{
+    line-height: 30%;
+}
 </style>
 </head>
 
@@ -133,7 +135,6 @@ button.OrderDetails{
 <header>
  
      <h1>D&I - Bookster's Shop</h1>
-     <button class="OrderDetails"><i class="fa fa-shopping-cart"></i></button>
 
  </header>
 
@@ -206,9 +207,12 @@ button.OrderDetails{
 </table>
 
 <div>
-    </p>Total Products Cost</p>
-    <p>Delivery Cost: </p>
-    <p>Total Cost: </p>
+ <p style="display: inline;">Total Products Cost: </p>
+<textarea readonly rows="1" cols="10" style="resize: none;"> 25.00 </textarea><br>
+<p style="display: inline;">Delivery Cost: </p>
+<textarea readonly rows="1" cols="10" style="resize: none; margin-left: 37px;"> 25.00 </textarea><br>
+<p style="display: inline;">Total Cost: </p>
+<textarea readonly rows="1" cols="10" style="resize: none; margin-left: 60px; "> 25.00 </textarea>
 </div>
 
 <footer>
@@ -225,7 +229,9 @@ button.OrderDetails{
 </label>
 </p>
 
-<p style="text-align:center" >&copy; 2018 Bookster's Shop. All Rights Reserved.<p>
+<div class="copyright">
+<p style="text-align:center" >&copy; 2018 Bookster's Shop. All Rights Reserved.</p>
+</div>
 </div>
 </footer>
 </body>
