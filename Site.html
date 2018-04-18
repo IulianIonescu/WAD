@@ -15,7 +15,9 @@ div.container {
 }
 
 header{
-    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
     color: white;
     background-color: black;
     clear: left;
@@ -49,10 +51,6 @@ article{
     border-left: 1px solid gray;
     padding: 1em;
     overflow: hidden;
-}
-h1,#right_upper,#loginbutton,#campuri{
-
-    display: inline-block; 
 }
 .button {
     background-color: grey;
@@ -148,7 +146,10 @@ form.example::after {
 div.Contact {
     line-height: 10%;
 }
-
+.Filtre{
+  font-size: 20px;
+  line-height: 10%;
+}
 p.Recommended{
     font-family: Georgia,serif;
     font-size:30px;
@@ -157,6 +158,13 @@ p.Recommended{
     margin-bottom: 50px;
     margin-right: 170px;
     margin-left: 450px;
+    color: blue;
+}
+p.Genres{
+      font-family: Georgia,serif;
+    font-size:20px;
+    width: 60%;
+
     color: blue;
 }
 
@@ -170,6 +178,29 @@ p.Recommended{
     width: 300px;
     padding: 10px;
 }
+
+form.campuri{
+  float : center;
+}
+
+#logo{
+  float: left;
+}
+#header-middle {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#header-right {
+    float: right;
+    width: 300px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+#signupbutton,#campuri,#loginbutton{
+  display: inline-block;
+}
 </style>
 </head>
 <body>
@@ -178,30 +209,40 @@ p.Recommended{
 
 <header>
  
-   <h1>D&I - Bookster's Shop</h1>
-   
- <button style="font-size:24px"><i class="fa fa-shopping-cart"></i></button>
-   <form id="campuri">
-   User name:<br>
-   <input type="text" name="username" id="username"><br>
-   Password:<br>
-   <input type="password" name="psw" id="password">
-   </form> 
 
-   <form id="loginbutton">
-   <input type="button" class="button" value="Login"><br>
-   <a href="url">Forgot Password?</a>
-    </form>
-  
+   <div id="logo">
+       <h1>D&I - Bookster's Shop</h1>
+    </div>
+    <div id="header-right">
+        <form id="signupbutton">
+        <p>No account?</p>
+       <input type="button" class="button" value="Sign Up">
+     </form>
 
-   <form id="right_upper">
-    <p>No account?</p>
-   <input type="button" class="button" value="Sign Up">
-    </form>
+     <button style="font-size:24px" ><i class="fa fa-shopping-cart"></i></button>
+ 
+
+    </div>
+    <div id="header-middle">
+       <form id="campuri">
+       User name:<br>
+       <input type="text" name="username" id="username"><br>
+       Password:<br>
+       <input type="password" name="psw" id="password">
+       </form> 
+
+       <form id="loginbutton">
+       <input type="button" class="button" value="Login"><br>
+       <a href="url" style="color : #819FF7">Forgot Password?</a>
+        </form>
+
+
+    </div>
 
 </header>
 
 <nav>
+  <p class="Genres">Genres</p>
   <ul>
     <li><a href="#">Fantasy</a></li>
     <li><a href="#">History</a></li>
@@ -223,29 +264,32 @@ p.Recommended{
 </form>
 
 <div class="left">
-    <p>Use filters</p>
+    <div class="Filtre">
+      <p>Apply filters</p>
+      <p>by Author, Publisher, Price</p>
+    </div>
+
     <form id="Author">
-    <select>
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="opel">Opel</option>
-      <option value="audi">Audi</option>
+    <select style="width: 100px">
+      <option value="volvo">Maria Anders</option>
+      <option value="saab">Francisco Chang</option>
+      <option value="opel">Roland Mendel</option>
+      <option value="audi">Helen Bennett</option>
     </select>
     </form>
     <form id="Publisher">
-    <select>
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="opel">Opel</option>
-      <option value="audi">Audi</option>
+    <select style="width: 100px">
+      <option value="volvo">Germany</option>
+      <option value="saab">Mexico</option>
+      <option value="opel">Austria</option>
+      <option value="audi">UK</option>
     </select>
     </form>
     <form id="Price">
-    <select>
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="opel">Opel</option>
-      <option value="audi">Audi</option>
+    <select style="width: 70px">
+      <option value="volvo"> < 50 </option>
+      <option value="saab"> 50 - 100 </option>
+      <option value="opel"> > 100 </option>
     </select>
     </form>
 </div><br>
@@ -337,10 +381,5 @@ p.Recommended{
 <p style="text-align:center" >&copy; 2018 Bookster's Shop. All Rights Reserved.<p>
 </div>
 </footer>
-
-
-
-
-
 </body>
 </html>

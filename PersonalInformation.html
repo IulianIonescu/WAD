@@ -16,7 +16,9 @@ div.container {
 }
 
 header{
-    padding: 5px;
+     padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
     color: white;
     background-color: black;
     clear: left;
@@ -111,22 +113,16 @@ p.PersonalInformation{
     margin-bottom: 20px;
 }
 
-a.resetPassword {
-	position: absolute;
-    top: 8px;
-    right: 16px;
-    font-size: 18px;
+a.resetPassword{
+ right:  20px;
 }
-
 </style>
 </head>
 
 <div class="container">
 
 <header>
- 
      <h1>D&I - Bookster's Shop</h1>
-      	<a class="resetPassword" href="">Resset password</a>
  </header>
 
  <p class="PersonalInformation">Personal Information
@@ -149,8 +145,29 @@ a.resetPassword {
   Address:<br>
   <Textarea Name="Address" Rows="5" Cols="30" >Dolj, Craiova, Dezrobirii Street, No. 16, Floor 3, Ap. 16</Textarea> 
   <br><br>
-</form> 
+</form>
+<div> 
 <input type="button" class="button" value="Update Information">
+<a class="resetPassword" href="">Reset password</a>
+</div>
+
+<footer>
+
+<div class="Contact">
+<p>Contact </p>
+<p>Phone : 0765334555</p>
+<p>Email : bookster@gmail.com</p>
+<p>Everyday between 10:00 - 22:00</p>
+</div>
+<p>
+<label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Subscribe to newsletter
+</label>
+</p>
+
+<p style="text-align:center" >&copy; 2018 Bookster's Shop. All Rights Reserved.<p>
+</div>
+</footer>
 
 </body>
 </html>
