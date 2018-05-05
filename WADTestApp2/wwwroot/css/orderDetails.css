@@ -1,0 +1,124 @@
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+header{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: left;
+}
+
+footer,textarea {
+    padding: 5px;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: left;
+}
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+
+article{
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+h1,#right_upper,#loginbutton,#campuri{
+
+    display: inline-block; 
+}
+.button {
+    background-color: grey;
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+table{
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+p.OrderDetails{
+    font-family: Georgia,serif;
+    font-size:30px;
+    width: 60%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 170px;
+    margin-left: 600px;
+    color: blue;
+}
+
+button.OrderDetails{
+    margin-left: 1635px;
+    font-size:24px;
+}
+
+.left {
+    float: left;
+    width: 300px;
+    padding: 10px;
+}
+
+.button {
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+div.Contact,div.copyright{
+    line-height: 30%;
+}
+</style>

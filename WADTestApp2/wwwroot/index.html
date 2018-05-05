@@ -1,0 +1,214 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>D&I - Bookster's Shop</title>
+    <script type="text/javascript" src="js/LaunchPage.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#loggin").click(function () {
+                $("header-middle").hide();
+            });
+            $("#loggin").click(function () {
+                $("user_logged").show();
+            });
+        });
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/Site.css" media="screen" />
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+
+
+            <div id="logo">
+                <h1>D&I - Bookster's Shop</h1>
+            </div>
+            <div id="header-right">
+                <form id="signupbutton" action="signuppage.html">
+                    <p>No account?</p> 
+                    <input type="submit" value="Sign Up" />
+                </form>
+
+                <form action="ShoppingCart.html" id="ShoppingCart">
+                    <button style="font-size:24px"><i class="fa fa-shopping-cart"></i></button>
+                </form>
+
+            </div>
+            <div id="header-middle">
+                <form id="campuri">
+                    User name:<br>
+                    <input type="text" name="username" id="username"><br>
+                    Password:<br>
+                    <input type="password" name="psw" id="password">
+                </form>
+
+                <form id="loginbutton" >
+                    <input id ="loggin"type="submit" value="Login" /><br>
+                    
+                    <a href="resetPassword.html" style="color : #819FF7">Forgot Password?</a>
+                </form>
+            </div>
+
+            <div id="user_logged" class="hide">
+                <form id="logoutbutton">
+                    <p>Hello User !</p>
+                    <input type="submit" value="Logout" />
+                </form>
+            </div>
+
+        </header>
+
+        <nav>
+            <p class="Genres">Genres</p>
+            <ul>
+                <li><a href="#">Fantasy</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Self Improvement</a></li>
+                <li><a href="#">Police</a></li>
+                <li><a href="#">War</a></li>
+                <li><a href="#">Romance</a></li>
+                <li><a href="#">Kids</a></li>
+                <li><a href="#">Manga</a></li>
+                <li><a href="#">Science Fiction</a></li>
+            </ul>
+        </nav>
+
+        <article>
+
+            <form class="example" action="/action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+
+            <div class="left">
+                <div class="Filtre">
+                    <p>Apply filters</p>
+                    <p>by Author, Publisher, Price</p>
+                </div>
+
+                <form id="Author">
+                    <select style="width: 100px">
+                        <option value="volvo">Maria Anders</option>
+                        <option value="saab">Francisco Chang</option>
+                        <option value="opel">Roland Mendel</option>
+                        <option value="audi">Helen Bennett</option>
+                    </select>
+                </form>
+                <form id="Publisher">
+                    <select style="width: 100px">
+                        <option value="volvo">Germany</option>
+                        <option value="saab">Mexico</option>
+                        <option value="opel">Austria</option>
+                        <option value="audi">UK</option>
+                    </select>
+                </form>
+                <form id="Price">
+                    <select style="width: 70px">
+                        <option value="volvo"> < 50 </option>
+                        <option value="saab"> 50 - 100 </option>
+                        <option value="opel"> > 100 </option>
+                    </select>
+                </form>
+            </div><br>
+            <p class="Recommended">Recommended books</p>
+            <table>
+
+                <tr>
+
+                    <th>Book Name</th>
+                    <th>Author</th>
+                    <th>Publishing House</th>
+                    <th>Price</th>
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <button style="font-size:24px"><i class="fa fa-cart-plus"></i></button>
+                        <button style="font-size:24px"> <i class="fa fa-star"></i></button>
+                        Alfreds Futterkiste
+                    </td>
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                    <td>25.00</td>
+                </tr>
+                <tr>
+                    <td>
+                        <button style="font-size:24px"><i class="fa fa-cart-plus"></i></button>
+                        <button style="font-size:24px"> <i class="fa fa-star"></i></button>
+                        Centro comercial Moctezuma
+                    </td>
+                    <td>Francisco Chang</td>
+                    <td>Mexico</td>
+                    <td>15.00</td>
+                </tr>
+                <tr>
+                    <td>
+                        <button style="font-size:24px"><i class="fa fa-cart-plus"></i></button>
+                        <button style="font-size:24px"> <i class="fa fa-star"></i></button>
+                        Ernst Handel
+                    </td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                    <td>30.00</td>
+                </tr>
+                <tr>
+                    <td>
+                        <button style="font-size:24px"><i class="fa fa-cart-plus"></i></button>
+                        <button style="font-size:24px"> <i class="fa fa-star"></i></button>
+                        Island Trading
+                    </td>
+                    <td>Helen Bennett</td>
+                    <td>UK</td>
+                    <td>35.00</td>
+                </tr>
+                <tr>
+                    <td>
+                        <button style="font-size:24px"><i class="fa fa-cart-plus"></i></button>
+                        <button style="font-size:24px"> <i class="fa fa-star"></i></button>
+                        Laughing Bacchus Winecellars
+                    </td>
+                    <td>Yoshi Tannamuri</td>
+                    <td>Canada</td>
+                    <td>40.00</td>
+                </tr>
+                <tr>
+                    <td>
+                        <button style="font-size:24px"><i class="fa fa-cart-plus"></i></button>
+                        <button style="font-size:24px"> <i class="fa fa-star"></i></button>
+                        Magazzini Alimentari Riuniti
+                    </td>
+                    <td>Giovanni Rovelli</td>
+                    <td>Italy</td>
+                    <td>5.00</td>
+                </tr>
+
+            </table>
+        </article>
+
+        <footer>
+
+            <div class="Contact">
+                <p>Contact </p>
+                <p>Phone : 0765334555</p>
+                <p>Email : bookster@gmail.com</p>
+                <p>Everyday between 10:00 - 22:00</p>
+            </div>
+            <p>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Subscribe to newsletter
+                </label>
+            </p>
+
+            <p style="text-align:center">&copy; 2018 Bookster's Shop. All Rights Reserved.<p>
+    </div>
+    </footer>
+</body>
+</html>
