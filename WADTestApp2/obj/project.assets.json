@@ -13132,11 +13132,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\GitHub\\WADTest_Sbora\\WADTestApp2\\WADTestApp2.csproj",
+      "projectUniqueName": "E:\\GitHub\\WAD\\WADTestApp2\\WADTestApp2.csproj",
       "projectName": "WADTestApp2",
-      "projectPath": "E:\\GitHub\\WADTest_Sbora\\WADTestApp2\\WADTestApp2.csproj",
+      "projectPath": "E:\\GitHub\\WAD\\WADTestApp2\\WADTestApp2.csproj",
       "packagesPath": "C:\\Users\\Iulian Ionescu\\.nuget\\packages\\",
-      "outputPath": "E:\\GitHub\\WADTest_Sbora\\WADTestApp2\\obj\\",
+      "outputPath": "E:\\GitHub\\WAD\\WADTestApp2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

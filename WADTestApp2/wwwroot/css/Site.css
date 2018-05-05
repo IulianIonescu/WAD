@@ -194,17 +194,20 @@ form.campuri {
     margin-right: auto;
 }
 
-#header-right {
+#header-right, #user_logged {
     float: right;
     width: 300px;
     margin-right: 20px;
     text-align: center;
 }
 
-#signupbutton, #campuri, #loginbutton, #ShoppingCart {
+#signupbutton, #campuri, #loginbutton, #ShoppingCart{
     display: inline-block;
 }
 .hide{
-    display: none;
+    display :none;
+}
+#logoutbutton, #shop_and_wish{
+    display: inline-block;
 }
 </style >

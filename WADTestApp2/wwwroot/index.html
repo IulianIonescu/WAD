@@ -6,22 +6,16 @@
     <title>D&I - Bookster's Shop</title>
     <script type="text/javascript" src="js/LaunchPage.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("#loggin").click(function () {
-                $("header-middle").hide();
-            });
-            $("#loggin").click(function () {
-                $("user_logged").show();
-            });
-        });
-    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/Site.css" media="screen" />
+
+
+
+
 </head>
 <body>
-
+    
     <div class="container">
 
         <header>
@@ -30,17 +24,35 @@
             <div id="logo">
                 <h1>D&I - Bookster's Shop</h1>
             </div>
-            <div id="header-right">
-                <form id="signupbutton" action="signuppage.html">
-                    <p>No account?</p> 
-                    <input type="submit" value="Sign Up" />
-                </form>
+            <div id="header-right" >
+                <div id="campurilog">
+                    <form id="signupbutton" action="signuppage.html">
+                        <p>No account?</p>
+                        <input type="submit" value="Sign Up" />
+                    </form>
 
-                <form action="ShoppingCart.html" id="ShoppingCart">
-                    <button style="font-size:24px"><i class="fa fa-shopping-cart"></i></button>
-                </form>
+                    <form action="ShoppingCart.html" id="ShoppingCart">
+                        <button style="font-size:24px"><i class="fa fa-shopping-cart"></i></button>
+                    </form>
+                </div>
+
+                <div id="user_logged" class="hide">
+                    <form id="logoutbutton">
+                        <p>Hello <a href="PersonalInformation.html" style="color : #819FF7">User</a>! </p>
+                        <input type="submit" value="Logout" />
+                    </form>
+                    <div id="shop_and_wish">
+                        <form id="wishlist" action="wishlist.html">
+                            <button style="font-size:24px"> <i class="fa fa-star"></i></button>
+                        </form>
+                        <form action="ShoppingCart.html" id="ShoppingCart">
+                            <button style="font-size:24px"><i class="fa fa-shopping-cart"></i></button>
+                        </form>
+                    </div>
+                </div>
 
             </div>
+
             <div id="header-middle">
                 <form id="campuri">
                     User name:<br>
@@ -49,20 +61,23 @@
                     <input type="password" name="psw" id="password">
                 </form>
 
-                <form id="loginbutton" >
-                    <input id ="loggin"type="submit" value="Login" /><br>
-                    
+                <form id="loginbutton">
+                    <button onclick="myFunction()">Login</button><br>             
                     <a href="resetPassword.html" style="color : #819FF7">Forgot Password?</a>
                 </form>
             </div>
 
-            <div id="user_logged" class="hide">
-                <form id="logoutbutton">
-                    <p>Hello User !</p>
-                    <input type="submit" value="Logout" />
-                </form>
-            </div>
-
+            
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("user_logged");
+                    var y = document.getElementById("campurilog");
+                    if (x.style.display === "none") {
+                        x.style.display = "block";
+                        y.style.display = "none";
+                    } 
+                }
+            </script>
         </header>
 
         <nav>
