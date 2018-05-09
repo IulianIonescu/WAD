@@ -25,7 +25,7 @@
                 <h1>D&I - Bookster's Shop</h1>
             </div>
             <div id="header-right" >
-                <div id="campurilog">
+                <div id="campurilog" class="campurilog">
                     <form id="signupbutton" action="signuppage.html">
                         <p>No account?</p>
                         <input type="submit" value="Sign Up" />
@@ -36,10 +36,12 @@
                     </form>
                 </div>
 
-                <div id="user_logged" class="hide">
+                <div id="user_logged" class="user_logged" style="display : none">
                     <form id="logoutbutton">
                         <p>Hello <a href="PersonalInformation.html" style="color : #819FF7">User</a>! </p>
-                        <input type="submit" value="Logout" />
+                        <div onclick="$('#user_logged').toggle(); $('#campurilog').toggle();$('#header-middle').css('visibility','visible')">
+                            <input type="button" value="Logout">
+                        </div>
                     </form>
                     <div id="shop_and_wish">
                         <form id="wishlist" action="wishlist.html">
@@ -62,27 +64,23 @@
                 </form>
 
                 <form id="loginbutton">
-                    <button onclick="myFunction()">Login</button><br>             
+                     <div onclick="$('#user_logged').toggle(); $('#campurilog').toggle(); $('#header-middle').css('visibility','hidden')">             
+                         <input type="button" value="Login">
+                     </div>
                     <a href="resetPassword.html" style="color : #819FF7">Forgot Password?</a>
                 </form>
             </div>
- 
-            <script>
-                function myFunction() {
-                    var x = document.getElementById("");
-                    var y = document.getElementById("fantasyBooks");
-                    if (x.style.display === "none") {
-                        x.style.display = "block";
-                    }
-                    else {
-                        y.style.display = "none";
-                    }
-                }
-            </script>
+
         </header>
 
         <nav>
-            <p class="Genres">Genres</p>
+
+            <div onclick="$('#recommendedBooks').toggle();$('#romanceBooks').hide();$('#policeBooks').hide();$('#warBooks').hide();$('#scienceFictionBooks').hide();$('#selfImprovementBooks').hide();$('#kidsBooks').hide();$('#manga').hide();$('#historyBooks').hide();$('#fantasyBooks').hide()">
+                <li><a href="#">Recommended</a></li>
+            </div>
+            <p class="Genres">
+                Genres
+            </p>
             <ul>
                 <div onclick="$('#recommendedBooks').hide();$('#romanceBooks').hide();$('#policeBooks').hide();$('#warBooks').hide();$('#scienceFictionBooks').hide();$('#selfImprovementBooks').hide();$('#kidsBooks').hide();$('#manga').hide();$('#historyBooks').hide();$('#fantasyBooks').toggle()">
                     <li><a href="#">Fantasy</a></li>
@@ -119,7 +117,7 @@
                 <div onclick="$('#recommendedBooks').hide();$('#recommendedBooks').hide();$('#romanceBooks').hide();$('#policeBooks').hide();$('#warBooks').hide();$('#selfImprovementBooks').hide();$('#kidsBooks').hide();$('#manga').hide();$('#fantasyBooks').hide();$('#historyBooks').hide();$('#scienceFictionBooks').toggle()">
                     <li><a href="#">Science Fiction</a></li>
                 </div>
-              
+
             </ul>
         </nav>
 

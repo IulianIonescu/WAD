@@ -161,12 +161,13 @@ p.Recommended {
     color: blue;
 }
 
-p.Genres {
+p.Genres, h1.RecommendedLink {
     font-family: Georgia,serif;
     font-size: 20px;
     width: 60%;
     color: blue;
 }
+
 
 #Author, #Publisher, #Price {
     display: inline-block;
