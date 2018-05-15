@@ -26,12 +26,13 @@ namespace WADTestApp2
         public void ConfigureServices(IServiceCollection services)
         {
             var connectionString = Configuration.GetConnectionString("Default");
-            
-            services.AddEntityFrameworkSqlServer()
-                     .AddDbContext<ApplicationDbContext>( options =>
-                                 options.UseSqlServer(connectionString));
-
-           services.AddMvc().AddJsonOptions(options => {               
+            services.AddDbContext<ApplicationDbContext>(options =>
+options.UseSqlServer(connectionString));
+            /*  services.AddEntityFrameworkSqlServer()
+                       .AddDbContext<ApplicationDbContext>( options =>
+                                   options.UseSqlServer(connectionString));
+              */
+            services.AddMvc().AddJsonOptions(options => {               
                  options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
              });
         }

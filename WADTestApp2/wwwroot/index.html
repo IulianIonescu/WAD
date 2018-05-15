@@ -9,7 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/Site.css" media="screen" />
-
+    <script src="BooksAPI.js" type="text/javascript"></script>
+    <script src="templates.js" type="text/javascript"></script>
 
 
 
@@ -76,49 +77,52 @@
         <nav>
 
             <div onclick="$('#recommendedBooks').toggle();$('#romanceBooks').hide();$('#policeBooks').hide();$('#warBooks').hide();$('#scienceFictionBooks').hide();$('#selfImprovementBooks').hide();$('#kidsBooks').hide();$('#manga').hide();$('#historyBooks').hide();$('#fantasyBooks').hide()">
-                <li><a href="#">Recommended</a></li>
+                <a href="#">Recommended</a>
             </div>
             <p class="Genres">
                 Genres
             </p>
-            <ul>
-                <div onclick="$('#recommendedBooks').hide();$('#romanceBooks').hide();$('#policeBooks').hide();$('#warBooks').hide();$('#scienceFictionBooks').hide();$('#selfImprovementBooks').hide();$('#kidsBooks').hide();$('#manga').hide();$('#historyBooks').hide();$('#fantasyBooks').toggle()">
-                    <li><a href="#">Fantasy</a></li>
-                </div>
 
-                <div onclick="$('#recommendedBooks').hide();$('#recommendedBooks').hide();$('#romanceBooks').hide();$('#policeBooks').hide();$('#warBooks').hide();$('#scienceFictionBooks').hide();$('#selfImprovementBooks').hide();$('#kidsBooks').hide();$('#manga').hide();$('#fantasyBooks').hide();$('#historyBooks').toggle()">
-                    <li><a href="#">History</a></li>
-                </div>
+            <div onclick="$('#recommendedBooks').hide();$('#romanceBooks').hide();$('#policeBooks').hide();$('#warBooks').hide();$('#scienceFictionBooks').hide();$('#selfImprovementBooks').hide();$('#kidsBooks').hide();$('#manga').hide();$('#historyBooks').hide();$('#fantasyBooks').toggle()">
+                <a href="#">Fantasy</a>
+            </div>
 
-                <div onclick="$('#recommendedBooks').hide(); $('#recommendedBooks').hide(); $('#romanceBooks').hide(); $('#policeBooks').hide(); $('#warBooks').hide(); $('#scienceFictionBooks').hide(); $('#kidsBooks').hide(); $('#manga').hide(); $('#fantasyBooks').hide(); $('#historyBooks').hide();$('#selfImprovementBooks').toggle()">
-                    <li><a href="#">Self-Improvement</a></li>
-                </div>
+            <div onclick="$('#recommendedBooks').hide();$('#recommendedBooks').hide();$('#romanceBooks').hide();$('#policeBooks').hide();$('#warBooks').hide();$('#scienceFictionBooks').hide();$('#selfImprovementBooks').hide();$('#kidsBooks').hide();$('#manga').hide();$('#fantasyBooks').hide();$('#historyBooks').toggle()">
+                <a href="#">History</a>
+            </div>
 
-                <div onclick="$('#recommendedBooks').hide();$('#recommendedBooks').hide();$('#romanceBooks').hide();$('#warBooks').hide();$('#scienceFictionBooks').hide();$('#selfImprovementBooks').hide();$('#kidsBooks').hide();$('#manga').hide();$('#fantasyBooks').hide();$('#historyBooks').hide();$('#policeBooks').toggle()">
-                    <li><a href="#">Police</a></li>
-                </div>
+            <div onclick="$('#recommendedBooks').hide(); $('#recommendedBooks').hide(); $('#romanceBooks').hide(); $('#policeBooks').hide(); $('#warBooks').hide(); $('#scienceFictionBooks').hide(); $('#kidsBooks').hide(); $('#manga').hide(); $('#fantasyBooks').hide(); $('#historyBooks').hide();$('#selfImprovementBooks').toggle()">
+                <a href="#">Self-Improvement</a>
+            </div>
 
-                <div onclick="$('#recommendedBooks').hide();$('#recommendedBooks').hide();$('#romanceBooks').hide();$('#policeBooks').hide();$('#scienceFictionBooks').hide();$('#selfImprovementBooks').hide();$('#kidsBooks').hide();$('#manga').hide();$('#fantasyBooks').hide();$('#historyBooks').hide();$('#warBooks').toggle()">
-                    <li><a href="#">War</a></li>
-                </div>
+            <div onclick="$('#recommendedBooks').hide();$('#recommendedBooks').hide();$('#romanceBooks').hide();$('#warBooks').hide();$('#scienceFictionBooks').hide();$('#selfImprovementBooks').hide();$('#kidsBooks').hide();$('#manga').hide();$('#fantasyBooks').hide();$('#historyBooks').hide();$('#policeBooks').toggle()">
+                <a href="#">Police</a>
+            </div>
 
-                <div onclick="$('#recommendedBooks').hide();$('#recommendedBooks').hide();$('#policeBooks').hide();$('#warBooks').hide();$('#scienceFictionBooks').hide();$('#selfImprovementBooks').hide();$('#kidsBooks').hide();$('#manga').hide();$('#fantasyBooks').hide();$('#historyBooks').hide();$('#romanceBooks').toggle()">
-                    <li><a href="#">Romance</a></li>
-                </div>
+            <div onclick="$('#recommendedBooks').hide();$('#recommendedBooks').hide();$('#romanceBooks').hide();$('#policeBooks').hide();$('#scienceFictionBooks').hide();$('#selfImprovementBooks').hide();$('#kidsBooks').hide();$('#manga').hide();$('#fantasyBooks').hide();$('#historyBooks').hide();$('#warBooks').toggle()">
+                <a href="#">War</a>
+            </div>
 
-                <div onclick="$('#recommendedBooks').hide();$('#recommendedBooks').hide();$('#romanceBooks').hide();$('#policeBooks').hide();$('#warBooks').hide();$('#scienceFictionBooks').hide();$('#selfImprovementBooks').hide();$('#manga').hide();$('#fantasyBooks').hide();$('#historyBooks').hide();$('#kidsBooks').toggle()">
-                    <li><a href="#">Kids</a></li>
-                </div>
+            <div onclick="$('#recommendedBooks').hide();$('#recommendedBooks').hide();$('#policeBooks').hide();$('#warBooks').hide();$('#scienceFictionBooks').hide();$('#selfImprovementBooks').hide();$('#kidsBooks').hide();$('#manga').hide();$('#fantasyBooks').hide();$('#historyBooks').hide();$('#romanceBooks').toggle()">
+                <a href="#">Romance</a>
+            </div>
 
-                <div onclick="$('#recommendedBooks').hide();$('#recommendedBooks').hide();$('#romanceBooks').hide();$('#policeBooks').hide();$('#warBooks').hide();$('#scienceFictionBooks').hide();$('#selfImprovementBooks').hide();$('#kidsBooks').hide();$('#fantasyBooks').hide();$('#historyBooks').hide();$('#manga').toggle()">
-                    <li><a href="#">Manga</a></li>
-                </div>
+            <div onclick="$('#recommendedBooks').hide();$('#recommendedBooks').hide();$('#romanceBooks').hide();$('#policeBooks').hide();$('#warBooks').hide();$('#scienceFictionBooks').hide();$('#selfImprovementBooks').hide();$('#manga').hide();$('#fantasyBooks').hide();$('#historyBooks').hide();$('#kidsBooks').toggle()">
+                <a href="#">Kids</a>
+            </div>
 
-                <div onclick="$('#recommendedBooks').hide();$('#recommendedBooks').hide();$('#romanceBooks').hide();$('#policeBooks').hide();$('#warBooks').hide();$('#selfImprovementBooks').hide();$('#kidsBooks').hide();$('#manga').hide();$('#fantasyBooks').hide();$('#historyBooks').hide();$('#scienceFictionBooks').toggle()">
-                    <li><a href="#">Science Fiction</a></li>
-                </div>
+            <div onclick="$('#recommendedBooks').hide();$('#recommendedBooks').hide();$('#romanceBooks').hide();$('#policeBooks').hide();$('#warBooks').hide();$('#scienceFictionBooks').hide();$('#selfImprovementBooks').hide();$('#kidsBooks').hide();$('#fantasyBooks').hide();$('#historyBooks').hide();$('#manga').toggle()">
+                <a href="#">Manga</a>
+            </div>
 
-            </ul>
+            <div onclick="$('#recommendedBooks').hide();$('#recommendedBooks').hide();$('#romanceBooks').hide();$('#policeBooks').hide();$('#warBooks').hide();$('#selfImprovementBooks').hide();$('#kidsBooks').hide();$('#manga').hide();$('#fantasyBooks').hide();$('#historyBooks').hide();$('#scienceFictionBooks').toggle()">
+                <a href="#">Science Fiction</a>
+            </div>
+
+            <!-- Main Menu -->
+            <div class="side-menu-container">
+                <ul id="categoriesList" class="nav navbar-nav"></ul>
+            </div><!-- /.navbar-collapse -->
         </nav>
 
         <article>
@@ -158,7 +162,24 @@
                     </select>
                 </form>
             </div><br>
+            <!-- ADAUGATE DE LA SBORA-->
+            <!-- Main Content -->
+            <div class="container-fluid">
+                <div class="side-body">
+                    <div id="productsContainer">
 
+                    </div>
+
+                </div>
+            </div>
+
+            <script src="storeFunctions.js" type="text/javascript"></script>
+            <script type="text/javascript">
+                showCategoryBooks("*");
+                showCategoriesInMenu($("#categoriesList"));
+            </script>
+
+            <!-- ADAUGATE DE LA SBORA-->
             <div id="recommendedBooks">
                 <p class="Recommended">Recommended books</p>
                 <table>

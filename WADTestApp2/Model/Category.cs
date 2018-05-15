@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace WADTestApp2.Model
 {
-    public class AuthorBooks
+    public class Category
     {
         public int Id { get; set; }
-        public virtual Author Author{ get; set;}
-        public virtual Book Book { get; set; }
+        public string Name { get; set; }
+        public ICollection<Book> Books { get; set; }
     }
 }
