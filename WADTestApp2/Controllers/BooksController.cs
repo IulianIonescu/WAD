@@ -33,8 +33,9 @@ namespace WADTestApp2.Controllers
 
         // GET: api/Books/5
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetBook([FromRoute] int id)
+        public Book GetBook([FromRoute] int id)
         {
+            /*
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -49,6 +50,10 @@ namespace WADTestApp2.Controllers
             }
 
             return Ok(book);
+            */
+
+            var book = _context.Books.Where(prod => prod.Id == id).FirstOrDefault();
+            return book;
         }
 
         // PUT: api/Books/5

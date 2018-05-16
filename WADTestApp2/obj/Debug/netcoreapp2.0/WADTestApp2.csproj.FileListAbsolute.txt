@@ -14,9 +14,9 @@ E:\GitHub\WAD\WADTestApp2\bin\Debug\netcoreapp2.0\WADTestApp2.runtimeconfig.json
 E:\GitHub\WAD\WADTestApp2\bin\Debug\netcoreapp2.0\WADTestApp2.runtimeconfig.dev.json
 E:\GitHub\WAD\WADTestApp2\bin\Debug\netcoreapp2.0\WADTestApp2.dll
 E:\GitHub\WAD\WADTestApp2\bin\Debug\netcoreapp2.0\WADTestApp2.pdb
-E:\GitHub\WAD\WADTestApp2\obj\Debug\netcoreapp2.0\WADTestApp2.csprojResolveAssemblyReference.cache
 E:\GitHub\WAD\WADTestApp2\obj\Debug\netcoreapp2.0\WADTestApp2.csproj.CoreCompileInputs.cache
 E:\GitHub\WAD\WADTestApp2\obj\Debug\netcoreapp2.0\WADTestApp2.AssemblyInfoInputs.cache
 E:\GitHub\WAD\WADTestApp2\obj\Debug\netcoreapp2.0\WADTestApp2.AssemblyInfo.cs
 E:\GitHub\WAD\WADTestApp2\obj\Debug\netcoreapp2.0\WADTestApp2.dll
 E:\GitHub\WAD\WADTestApp2\obj\Debug\netcoreapp2.0\WADTestApp2.pdb
+E:\GitHub\WAD\WADTestApp2\obj\Debug\netcoreapp2.0\WADTestApp2.csprojResolveAssemblyReference.cache
