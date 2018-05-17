@@ -25,10 +25,14 @@ namespace WADTestApp2.Controllers
         [HttpGet]
         public IEnumerable<Book> GetBooks()
         {
+            
             var retVal = _context.Books
+                                 .Include(book => book.Category)
                                 .Include(book => book.AuthorsLinks)
                                     .ThenInclude(al => al.Author);
+            
             return retVal;
+
         }
 
         // GET: api/Books/5
@@ -58,8 +62,9 @@ namespace WADTestApp2.Controllers
 
         // PUT: api/Books/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutBook([FromRoute] int id, [FromBody] Book book)
+        public IActionResult PutBook([FromRoute] int id, [FromBody] Book product)
         {
+            /*
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -89,12 +94,31 @@ namespace WADTestApp2.Controllers
             }
 
             return NoContent();
-        }
+            */
+            Book retProduct = product;
+            IActionResult retResult = null;
+            var existingProduct = _context.Books.Where(prod => prod.Id == id).FirstOrDefault();
+            if (existingProduct != null)
+            {
+                existingProduct.Name = product.Name;
+                existingProduct.Description = product.Description;
+                existingProduct.Price = product.Price;
+                retProduct = existingProduct;
+                retResult = Ok(retProduct);
+            }
+            else
+            {
+                retResult = NotFound(retProduct);
+            }
 
+            return retResult;
+        }
+           
         // POST: api/Books
         [HttpPost]
-        public async Task<IActionResult> PostBook([FromBody] Book book)
+        public IActionResult PostBook([FromBody]Book newProduct)
         {
+            /*
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -104,6 +128,20 @@ namespace WADTestApp2.Controllers
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetBook", new { id = book.Id }, book);
+            */
+            Book retProduct = null;
+            var existingProduct = _context.Books.Where(prod => prod.Id == newProduct.Id).FirstOrDefault();
+            if (existingProduct != null)
+            {
+                retProduct = existingProduct;
+            }
+            else
+            {
+                retProduct = newProduct;
+                _context.Books.Add(newProduct);
+                _context.SaveChanges();
+            }
+            return Ok(existingProduct);
         }
 
         // DELETE: api/Books/5

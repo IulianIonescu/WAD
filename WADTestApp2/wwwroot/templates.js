@@ -4,11 +4,17 @@
     var currentTemplate = template;
     do {
         currentTemplate = template;
-        template = template.replace("{BookName}", book.name);
+        template = template.replace("{bookName}", book.name);
     } while (template !== currentTemplate);
 
-    template = template.replace("{productDesc}", product.description);
-    template = template.replace("{productPrice}", product.price);
+    template = template.replace("{bookDesc}", book.description);
+    template = template.replace("{bookPrice}", book.price);
+    var mainAuthor = "";
+    if (book.authorsLinks.length > 0)
+    {
+        mainAuthor = book.authorsLinks[0].author.name;
+    }
+    template = template.replace("{bookAuthor}", mainAuthor);
 
     return template;
 

@@ -5,8 +5,14 @@
         });
 }
 function fillInBooks(container, books)
-{   
-   
+{
+    var header = $(container).first();
+    var headerText = "";
+    if (header)
+    {
+        headerText = $(header).html();
+    }
+
    getTemplate("bookTemplate.html").done(
             function (response)
             {
@@ -14,8 +20,9 @@ function fillInBooks(container, books)
                 for (var i = 0; i < books.length; i++) {
                         bookHtml = getBookHtml(response, books[i]);
                         finalHtml = finalHtml + bookHtml;
-                    }
-                    $(container).html(finalHtml);
+                }
+                finalHtml = headerText + finalHtml;
+                $(container).html(finalHtml);
             }
         );
 }
@@ -37,16 +44,18 @@ function fillInCategoriesInMenu(menuContainer, categories)
 
 function showCategoryBooks(categoryId)
 {
-    $("#booksContainer").html("<b>Loading books...</b>");   
+   // $("#booksContainer").html("<b>Loading books...</b>");   
     var booksApi = new BooksAPI();
     var books;
     booksApi.setBaseURL("");
     if (categoryId === "*")
     {
+
         books = booksApi.getAllBooks();
     }
     else
     {
+
         books = booksApi.getBooksInCategory(categoryId);
     }
     
