@@ -6,6 +6,7 @@
 }
 function fillInBooks(container, books)
 {
+
     var header = $(container).first();
     var headerText = "";
     if (header)
@@ -50,12 +51,10 @@ function showCategoryBooks(categoryId)
     booksApi.setBaseURL("");
     if (categoryId === "*")
     {
-
         books = booksApi.getAllBooks();
     }
     else
     {
-
         books = booksApi.getBooksInCategory(categoryId);
     }
     

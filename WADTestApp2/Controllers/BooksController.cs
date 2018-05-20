@@ -30,32 +30,13 @@ namespace WADTestApp2.Controllers
                                 .Include(book => book.Category)
                                 .Include(book => book.AuthorsLinks)
                                 .ThenInclude(al => al.Author);
-            
             return retVal;
-
         }
 
         // GET: api/Books/5
         [HttpGet("{id}")]
         public Book GetBook([FromRoute] int id)
         {
-            /*
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            var book = await _context.Books
-                                .Include("AuthorBooks").SingleOrDefaultAsync(m => m.Id == id);
-
-            if (book == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(book);
-            */
-
             var book = _context.Books.Where(prod => prod.Id == id).FirstOrDefault();
             return book;
         }
@@ -64,37 +45,6 @@ namespace WADTestApp2.Controllers
         [HttpPut("{id}")]
         public IActionResult PutBook([FromRoute] int id, [FromBody] Book product)
         {
-            /*
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            if (id != book.Id)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(book).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!BookExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
-            */
             Book retProduct = product;
             IActionResult retResult = null;
             var existingProduct = _context.Books.Where(prod => prod.Id == id).FirstOrDefault();
@@ -119,17 +69,6 @@ namespace WADTestApp2.Controllers
         [HttpPost]
         public IActionResult PostBook([FromBody]Book newProduct)
         {
-            /*
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            _context.Books.Add(book);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetBook", new { id = book.Id }, book);
-            */
             Book retProduct = null;
             var existingProduct = _context.Books.Where(prod => prod.Id == newProduct.Id).FirstOrDefault();
             if (existingProduct != null)
