@@ -159,6 +159,7 @@ p.Recommended {
     margin-right: 170px;
     margin-left: 450px;
     color: blue;
+    display : none;
 }
 
 p.Genres, h1.RecommendedLink {

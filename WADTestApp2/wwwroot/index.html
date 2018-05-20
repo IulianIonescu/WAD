@@ -87,8 +87,9 @@
             <div class="side-menu-container">
                 <ul id="categoriesList" class="nav navbar-nav"></ul>
             </div><!-- /.navbar-collapse -->
+            <a href="#" onclick="showCategoryBooks('*');$('#booksContainer tbody').remove();"><span class="glyphicon glyphicon-plane"></span>Recommended</a>
         </nav>
-
+        
         <article>
 
             <!-- SEARCH-->
@@ -149,20 +150,18 @@
             </script>
 
             <!-- BOOKS-->
-            <div id="recommendedBooks">
-                <div id="Poezie" style="display:none">Poezie</div>
-                <table id="booksContainer">
-                    <thead>
-                        <tr>
-                            <th>Book Name</th>
-                            <th>Author</th>
-                            <th>Publishing House</th>
-                            <th>Price</th>
-                            <th>Category</th>
-                        </tr>
-                    </thead>
-                </table>
-            </div>
+            <table id="booksContainer">
+                <thead>
+                    <tr>
+                        <th>Book Name</th>
+                        <th>Author</th>
+                        <th>Publishing House</th>
+                        <th>Price</th>
+                        <th>Genre</th>
+                    </tr>
+                </thead>
+            </table>
+
 
         </article>
 

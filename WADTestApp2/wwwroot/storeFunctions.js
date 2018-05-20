@@ -7,6 +7,7 @@
 function fillInBooks(container, books)
 {
 
+
     var header = $(container).first();
     var headerText = "";
     if (header)
@@ -45,7 +46,6 @@ function fillInCategoriesInMenu(menuContainer, categories)
 
 function showCategoryBooks(categoryId)
 {
-   // $("#booksContainer").html("<b>Loading books...</b>");   
     var booksApi = new BooksAPI();
     var books;
     booksApi.setBaseURL("");
@@ -56,6 +56,7 @@ function showCategoryBooks(categoryId)
     else
     {
         books = booksApi.getBooksInCategory(categoryId);
+
     }
     
     books.done(
