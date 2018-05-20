@@ -27,9 +27,9 @@ namespace WADTestApp2.Controllers
         {
             
             var retVal = _context.Books
-                                 .Include(book => book.Category)
+                                .Include(book => book.Category)
                                 .Include(book => book.AuthorsLinks)
-                                    .ThenInclude(al => al.Author);
+                                .ThenInclude(al => al.Author);
             
             return retVal;
 
@@ -103,6 +103,7 @@ namespace WADTestApp2.Controllers
                 existingProduct.Name = product.Name;
                 existingProduct.Description = product.Description;
                 existingProduct.Price = product.Price;
+                existingProduct.Category = product.Category;
                 retProduct = existingProduct;
                 retResult = Ok(retProduct);
             }

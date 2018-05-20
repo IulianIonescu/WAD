@@ -79,7 +79,7 @@
 
 
     this.getBooksInCategory = function (categoryId) {
-        var apiURL = "api/Categories/" + categoryId + "/Books";
+        var apiURL = "api/Categories/" + categoryId +"/Books";
         return doAsyncGet(apiURL);
     };
 

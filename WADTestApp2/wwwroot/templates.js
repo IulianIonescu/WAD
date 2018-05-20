@@ -8,7 +8,8 @@
     } while (template !== currentTemplate);
 
     template = template.replace("{bookDesc}", book.description);
-    template = template.replace("{bookPrice}", book.price);
+    template = template.replace("{bookPrice}", book.price + " Ron");
+    template = template.replace("{bookCategory}", book.category.name);
     var mainAuthor = "";
     if (book.authorsLinks.length > 0)
     {

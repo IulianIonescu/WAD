@@ -11,7 +11,7 @@ using WADTestApp2.Model;
 namespace WADTestApp2.Controllers
 {
     [Produces("application/json")]
-    [Route("api/Categories")]
+    [Route("api/[controller]")]
     public class CategoriesController : Controller
     {
         private readonly ApplicationDbContext dbContext;
@@ -22,7 +22,7 @@ namespace WADTestApp2.Controllers
         }
 
 
-        // GET: api/Categories
+        // GET: api/<controller>
         [HttpGet]
         public IEnumerable<Category> Get()
         {
@@ -30,19 +30,19 @@ namespace WADTestApp2.Controllers
         }
 
         // GET: api/Categories/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}/Books")]
         public IActionResult Get(int id)
         {
-            var categoryData = dbContext
-               .Categories
-               .Include("Books")
-               .Where(categ => categ.Id == id).FirstOrDefault();
-            if (categoryData != null)
+            var retBook = dbContext.Books
+                                .Include(book => book.Category).Where(bookcat => bookcat.Category.Id == id)
+                                .Include(book => book.AuthorsLinks)
+                                .ThenInclude(al => al.Author);
+
+            if (retBook != null)
             {
 
-                return Ok(categoryData.Books.AsEnumerable());
+                return Ok(retBook.AsEnumerable());
             }
-
             return NotFound();
         }
         
